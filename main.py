@@ -6,9 +6,9 @@ nltk.download('vader_lexicon')
 sia = SentimentIntensityAnalyzer()
 
 def map_to_emoji(score):
-    if score >= 0.5:
+    if score >= 0.1:
         return "😃"  # happy face emoji
-    elif score <= -0.5:
+    elif score <= -0.1:
         return "😔"  # sad face emoji
     else:
         return "😐"  # neutral face emoji
@@ -21,3 +21,4 @@ emoji = map_to_emoji(sentiment_score)
 
 print(f"Sentiment score: {sentiment_score:.2f}")
 print(f"Emoji: {emoji}")
+print(f"Made by FlxMaximus 😁")
